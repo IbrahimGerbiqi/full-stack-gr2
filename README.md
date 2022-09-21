@@ -1,2 +1,4 @@
-kadri veseli
-hashim thaqi
+   1   0 
+
+   1   1
+
