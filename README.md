@@ -1,1 +1,4 @@
-# full-stack-gr6
+# full-stack-gr4
+
+kadri veseli 
+hashim thaqi
