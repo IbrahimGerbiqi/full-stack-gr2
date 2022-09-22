@@ -1,2 +1,2 @@
-kadri veseli
-hashim thaqi
+# Full-Stack-Gr2
+Errors are bad, mkay?
