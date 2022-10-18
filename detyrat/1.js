@@ -7,10 +7,22 @@
 // For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
 
 // Only integers greater than or equal to zero will be supplied to the function.
+const prompt = require('prompt-sync')()
 
-
-function factorialize(num) {
-
+function factorialize() {
+    const number = parseInt(prompt('Enter a positive number: '))
+    let factorial = 1
+    if (number < 0) {
+        return `Error! ${number} is a negative number!`
+    } else if (number === 0) {
+        return `The factorial of ${number} is 1.`
+    } else {
+        for (let i = 1; i <= number; i++) {
+            factorial *= i
+        }
+    }
+    return `The factorial of ${number} is ${factorial}.`
 }
-  
-factorialize(5);
+
+console.log(factorialize())
+
