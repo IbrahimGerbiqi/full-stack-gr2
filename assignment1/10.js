@@ -2,3 +2,13 @@
 // those 2 parameters should not be empty and should be numbers
 // otherwise we need to tell user that given values are wrong or empty.
 // if given numbers are correct return the string that tells result of given numbers
+
+function janenumra(num1, num2) {
+    if (typeof(num1) == 'number' && typeof(num2) == 'number') {
+        console.log(num1 + num2);
+    } else {
+        console.log('Te dhenat e pasakta');
+    }
+}
+
+janenumra(3, 4)

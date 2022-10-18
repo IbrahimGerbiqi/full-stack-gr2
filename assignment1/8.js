@@ -13,8 +13,7 @@ let student = {
             postalCode: 20000,
         },
     },
-    education: [
-        {
+    education: [{
             name: "High School",
             startDate: "02/07/2015",
             endDate: "01/05/2018",
@@ -26,3 +25,20 @@ let student = {
         },
     ],
 };
+
+// John Doe has finished High School and University
+function Universitet(array) {
+    let universitet = '';
+
+    array.forEach(i => {
+        universitet += i.name + ' and ';
+
+    });
+
+    let tekst = universitet.slice(0, universitet.lastIndexOf('and'));
+    return tekst;
+}
+
+let fjalia = student.name + ' ' + student.lastName + '' + Universitet(student.education);
+
+console.log(fjalia);

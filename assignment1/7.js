@@ -2,6 +2,7 @@
 
 // Student with name John Doe is 25 years old from Kosovo/Prizren
 
+
 let student = {
     name: "John",
     lastName: "Doe",
@@ -13,8 +14,7 @@ let student = {
             postalCode: 20000,
         },
     },
-    education: [
-        {
+    education: [{
             name: "High School",
             startDate: "02/07/2015",
             endDate: "01/05/2018",
@@ -26,3 +26,9 @@ let student = {
         },
     ],
 };
+
+// Student with name John Doe is 25 years old from Kosovo/Prizren
+
+let fjalia = 'Student with name ' + student.name + ' ' + student.lastName + ' is ' + student.age + ' years old from ' + student.country.name + '/' + student.country.city.name;
+
+console.log(fjalia);
