@@ -26,3 +26,5 @@ let student = {
         },
     ],
 };
+
+console.log('Student with name ' +student.name+ ' '+student.lastName+ ' is ' +student.age+ ' years old from ' +student.country.name+ '/'+student.country.city.name);
