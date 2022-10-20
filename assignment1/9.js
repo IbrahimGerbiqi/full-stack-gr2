@@ -13,4 +13,21 @@ function sum(array) {
     return sumArr
 }
 
+// let sum1 = '29.09090909090'
+//
+// function decimal(value,item) {
+//     let result = ''
+//     for (let i = 0; i < value; i++) {
+//         result += item[i]
+//     }
+//     return result
+// }
+//
+// let decimalValue = decimal(5,sum1.split('.')[1])
+//
+// let finalValue = `${sum1.split('.')[0]}.${decimalValue}`
+//
+// console.log(finalValue)
+
 console.log(`The combined sum of both arrays is ${combArr}.`)
+
