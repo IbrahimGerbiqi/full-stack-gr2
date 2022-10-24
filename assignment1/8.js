@@ -39,6 +39,27 @@ function Universitet(array) {
     return tekst;
 }
 
-let fjalia = student.name + ' ' + student.lastName + '' + Universitet(student.education);
+let fjalia = student.name + ' ' + student.lastName + ' ' + Universitet(student.education);
 
 console.log(fjalia);
+/*
+class libri {
+    constructor(emri, autori, zhandri) {
+        this.emri = emri;
+        this.autori = autori;
+        this.zhandri = zhandri;
+    }
+
+    Tedhenat() {
+        return `Libri ${emri} eshte shkruar nga ${autori}`;
+    }
+
+    get dhenat() {
+        this.Tedhenat()
+    }
+}
+
+
+libri1 = new libri('libri1', 'autori1', 'aksion');
+
+libri1.Tedhenat();*/
