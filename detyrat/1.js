@@ -8,9 +8,12 @@
 
 // Only integers greater than or equal to zero will be supplied to the function.
 
-
 function factorialize(num) {
-
+  let a = 1;
+  for (let i = 1; i <= num; i++) {
+    a *= i;
+  }
+  return a;
 }
-  
-factorialize(5);
+
+console.log(factorialize(5));
