@@ -1,14 +1,15 @@
 kayo = {
-  sick: 0,
-  healthy: 1,
+  health: false,
 };
 
 function cook() {
   return new Promise((resolve, reject) => {
-    if (kayo.sick === 0 && kayo.healthy === 1) reject(0);
-    else if (kayo.sick === 1 && kayo.healthy === 0) {
-      resolve("Kayo is not sick and cake is ready");
-    }
+    setTimeout(() => {
+      if (kayo.health === false) reject(0);
+      else {
+        resolve("");
+      }
+    }, 2000); // 2 weeks
   })
     .then(handleSuccess)
     .catch(handleError);
