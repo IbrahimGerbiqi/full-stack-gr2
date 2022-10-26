@@ -1,2 +1,1 @@
-# Full-Stack-Gr2
-Errors are bad, mkay?
+# full-stack-gr4
