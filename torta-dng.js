@@ -8,14 +8,13 @@ const cake = {
 function start(){
     console.log('on start', cake)
     return new Promise((resolve, reject)=>{
-        if(cake.kayo === 1){
-            resolve('I have n cakes And I am happy')
-        }else{
-            if(cake.kayo === 0 || cake.kayo !==1){
+        if(cake.kayo > 0){
+            resolve('Kayo is healthy: I have n cakes And I am happy')
+        }else if(cake.kayo === 0){
                 reject(0)
             }
         }
-    }).then(success).catch(error)
+    ).then(success).catch(error)
 }
 
 function end(){
@@ -23,7 +22,7 @@ function end(){
 }
 
 success = (result) =>{
-    console.log('result', result)
+    console.log(result)
     end()
 }
 
@@ -33,10 +32,10 @@ error = (error) =>{
 
 function reStock(param){
     if(param === 0){
-        console.log('Kayo eshte semure, duhet te sherohet')
+        console.log('Kayo is sick: There is no cake and I am sad')
         cake.kayo++
     }else if(param === 1){
-        console.log('Kayo eshte sheruar')
+        console.log('Kayo is healthy')
     }
     start()
 }
