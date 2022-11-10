@@ -10,7 +10,12 @@
 
 
 function factorialize(num) {
-
+    let faktoriel=1;
+    for(let i=1; i<= num; i++){
+        
+        faktoriel=faktoriel*i; 
+    }
+    return faktoriel
 }
-  
-factorialize(5);
+
+console.log(factorialize(5));

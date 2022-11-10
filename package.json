@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  },
+  "name": "full-stack-gr2",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IbrahimGerbiqi/full-stack-gr2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IbrahimGerbiqi/full-stack-gr2/issues"
+  },
+  "homepage": "https://github.com/IbrahimGerbiqi/full-stack-gr2#readme"
+}

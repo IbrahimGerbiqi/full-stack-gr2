@@ -11,7 +11,7 @@ let student = {
         city: {
             name: "Prizren",
             postalCode: 20000,
-        },
+        }
     },
     education: [
         {
@@ -23,6 +23,10 @@ let student = {
             name: "University",
             startDate: "02/07/2019",
             endDate: "01/05/2021",
-        },
-    ],
+        }
+    ]
 };
+
+let texti = `Student with name ${student.name} ${student.lastName} is ${student.age} years old from ${student.country.name}/${student.country.city.name}`
+
+console.log(texti);
