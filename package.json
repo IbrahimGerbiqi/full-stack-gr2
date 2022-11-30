@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "upper-case": "^2.0.2"
   },
   "name": "full-stack-gr2",
   "description": "",
   "version": "1.0.0",
   "main": "uppercase.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
