@@ -1,0 +1,35 @@
+{
+  "name": "foldline",
+  "version": "1.1.0",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
+  "description": "Folds a long line according to the RFC 5322",
+  "license": "MIT",
+  "keywords": [
+    "line",
+    "fold",
+    "folding",
+    "rfc5322",
+    "format"
+  ],
+  "main": "foldline.js",
+  "dependencies": {},
+  "devDependencies": {
+    "matcha": "~0.7.0",
+    "mocha": "~4.0.1"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-foldline",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhermsmeier/node-foldline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-foldline/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --ui tdd",
+    "benchmark": "matcha"
+  }
+}

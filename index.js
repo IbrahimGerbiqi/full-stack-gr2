@@ -1,42 +1,33 @@
-// let array = [{name:'test',lastName:'test2'}, 6, 23, 85, 5, 6, 7] 
+const express = require('express')
+const app = express()
+const db = require('./database/database')
 
-let nxenesit = ["Sejjid", "Adem", "Dreni","Muniba", "Amin"]
+app.use(express.json())
 
- for(let i of nxenesit){
-    console.log(i[0])
- }
+app.get("/:id", (req, res) => {
+    res.send("Hello " + req.params.id)
+})
 
-let array = [
-    {pesha:'1kg',emri:'domate'}, // 0
-    {pesha:'1kg',emri:'kastravec'}, // 1
-    {pesha:'2kg',emri:'djath'}, // 2
-];
+app.post("/register", (req, res) => {
+    console.log(`${req.body.name} ${req.body.lastName}`);
+    res.send(`${req.body.name} ${req.body.lastName}`)
+})
 
-// let element = 0
+app.post("/", (req, res) => {
+    res.send(req.body)
+})
 
-// for (let index = 0; index < array.length; index++) {
-//     element = array[index] + element
-//     console.log(test)
-// }
+app.get("/users/:page/:rpp", (req, res) => {
+    let rowsperpage = req.params.rpp
+    if (rowsperpage == 0) {
+        rowsperpage = 5
+    }
 
-// console.log(element);
+    let x = (req.params.page - 1) * rowsperpage
+    db.query(`SELECT * FROM students LIMIT ${x} , ${rowsperpage}`, function(error, results) {
+        if (error) throw error;
+        res.json(results)
+    });
+})
 
-// for(let a of array){
-//     let emri = a.emri
-//     let pesha = a.pesha
-//     console.log('Duhet me ble '+ emri + ' me sasi ' + pesha)
-// };
-
-// for(let a in array){
-//     let emri = array[0].emri
-//     let pesha = array[0].pesha
-//     console.log('Duhet me ble '+ emri + ' me sasi ' + pesha)
-// };
-
-// for(let a in array){
-//     console.log(array[a])
-// }
-
-
-
-
+app.listen(3200)

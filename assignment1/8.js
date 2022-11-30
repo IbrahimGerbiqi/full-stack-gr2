@@ -19,10 +19,20 @@ let student = {
             endDate: "01/05/2018",
         },
         {
-            name: "University",
-            startDate: "02/07/2019",
-            endDate: "01/05/2021",
+            name: "High School",
+            startDate: "02/07/2015",
+            endDate: "01/05/2018",
         },
+        {
+            name: "High School",
+            startDate: "02/07/2015",
+            endDate: "01/05/2018",
+        },
+        {
+            name: "High School",
+            startDate: "02/07/2015",
+            endDate: "01/05/2018",
+        }
     ],
 };
 

@@ -14,4 +14,12 @@ for (i in arr_1) {
 
 console.log(arr_result);
 
+let sumTotal = []
+
+for (let i=0; i<arr_1.length;i++){
+
+    sumTotal[i]=arr_1[i]+arr_2[i];
+
+}console.log(sumTotal);
+
 //result [12,7,16]
