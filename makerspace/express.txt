@@ -1,0 +1,8 @@
+GET - merr informata
+POST - dergon informata 
+PUT - ben update 
+DELETE 
+PATCH
+OPTIONS
+HEAD
+TRACE

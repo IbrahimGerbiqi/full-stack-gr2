@@ -1,0 +1,21 @@
+git add <filename>
+git add.
+git commit -m "commit message"
+git push
+git help
+git config - Për të vendosur konfigurimet bazë në github si emri dhe emaili juaj.
+git config --global
+
+git status - Për të parë se çfarë ka ndryshuar që nga kryerja e fundit.
+Ai tregon të gjitha skedarët 
+që janë shtuar dhe modifikuar dhe të gatshëm për t'u kryer dhe dosjet të cilat janë të pagjurmuara.
+
+git init - Për të krijuar një depo lokale git për ne në kartelën tonë të dyqanit.
+Kjo do të ndihmojë në administrimin e komandave git për atë depo të veçantë.
+
+git log - Për të kontrolluar historinë e kryerjes për referencën tonë. 
+
+
+git clone /path/to/repository 
+
+
