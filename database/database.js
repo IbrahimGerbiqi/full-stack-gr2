@@ -1,15 +1,16 @@
-const mysql = require('mysql')
+const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'school'
-  })
+  host: "localhost",
+  port: "3336",
+  user: "root",
+  password: "",
+  database: "school_2",
+});
 
-  connection.connect((err)=>{
-    if(err) throw err
-    console.log("MySQL database is connected successfully!");
-  })
+connection.connect((err) => {
+  if (err) throw err;
+  console.log("MySQL database is connected successfully!");
+});
 
-module.exports = connection
+module.exports = connection;
