@@ -2,6 +2,7 @@
 
 let arr_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+<<<<<<< HEAD
 // Metoda 1
 
 let reArr = [];
@@ -25,3 +26,8 @@ console.log(reArr);
 // console.log(reArr);
 // console.timeEnd('test');
 
+=======
+arr_1 = arr_1.reverse()
+
+console.log(arr_1);
+>>>>>>> d909caa1376ee899fd840ff8e3358c8ec2e08cff
