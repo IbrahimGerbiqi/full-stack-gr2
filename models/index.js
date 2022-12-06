@@ -6,7 +6,7 @@ const env       = process.env.NODE_ENV || 'development'
 const db        = {}
 
 let sequelize
-sequelize = new Sequelize( 'school', 'root', '', {
+sequelize = new Sequelize( 'school', 'root', '040285c3', {
     host: 'localhost',
     dialect: 'mysql'
   } )
