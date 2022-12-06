@@ -79,4 +79,6 @@ app.get('/users/limit/:page',(req,res)=>{
     })
 })
 
+app.delete('users/:id')
+
 app.listen(3000)
