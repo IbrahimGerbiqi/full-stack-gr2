@@ -25,7 +25,9 @@
     "is-upper-case": "^2.0.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "reflect-metadata": "^0.1.13",
     "sequelize": "^6.26.0",
+    "typeorm": "^0.3.11",
     "upper-case": "^2.0.2"
   },
   "devDependencies": {
