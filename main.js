@@ -7,6 +7,8 @@ const models = require('./models/index');
 app.use(express.json())
 
 const userRouters = require('./routers/users')
+const studentsRouters = require('./routers/students')
+
 
 // .      /user/Joe/ 9  /test
 // app.get('/user/:id/:name/test', (req, res) => {
@@ -33,6 +35,8 @@ const userRouters = require('./routers/users')
 // router.get('/users',getUsersAndCount)
 
 app.use('/api/users', userRouters)
+app.use('/api/students', studentsRouters)
+
 
 // app.get('/users',(req,res)=>{
 //     const users = models.User.findAndCountAll({})
@@ -83,7 +87,7 @@ app.use('/api/users', userRouters)
 //     })
 // })
 // app.post('/users',(req,res)=>{
-   
+
 //     // db.query('INSERT INTO students(firstName,lastName,email) VALUES ("'+firstName+'","'+lastName+'","'+email+'")'
 //     // , (err,result)=>{
 //     //     if(err){ throw err}
@@ -101,7 +105,7 @@ app.use('/api/users', userRouters)
 // app.put('/users/:id',(req,res)=>{
 //     const firstName = req.body.firstName
 //     const lastName = req.body.lastName
-    
+
 //     const users = models.User.update({ firstName: firstName, lastName:lastName}, {
 //         where: {
 //           id: req.params.id
@@ -111,7 +115,7 @@ app.use('/api/users', userRouters)
 //       res.json( 'Useri u perditesua me sukses' )
 //     })
 
-    
+
 // })
 
-app.listen(3000)
+app.listen(4200)
