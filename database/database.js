@@ -14,20 +14,14 @@
 
 // module.exports = connection
 
-const {Sequelize} = require('sequelize');
+const { Sequelize } = require('sequelize');
 
-
-const sequelize = new Sequelize('school', 'root', '0402853c', {
-        host: 'localhost',
-        dialect: 'mysql'
-    });
-    if(sequelize.authenticate())
-{
-    console.log('Connection has been established successfully.');
+const sequelize = new Sequelize('school', 'root', '040285c3', {
+  host: 'localhost',
+  dialect: 'mysql'
+});
+ if(sequelize.authenticate()){
+  console.log('Connection has been established successfully.');
+} else{
+  console.error('Unable to connect to the database:', error);
 }
-else
-{
-    console.error('Unable to connect to the database:', error);
-}
-
-
