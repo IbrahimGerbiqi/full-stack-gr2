@@ -56,13 +56,14 @@ app.use('/api/users', userRouters)
 //     })
 // })
 
+    app.use('/api/students', studentRouters);
 // app.get('/users/:id',(req,res)=>{
-//     const users = models.User.findOne({
-//         where: {id: req.params.id},
-//     })
-//     .then( userResponse => {
-//       res.json( userResponse )
-//     })
+    // const users = models.User.findOne({
+    //     where: {id: req.params.id},
+    // })
+    // .then( userResponse => {
+    //   res.json( userResponse )
+    // })
 
 // })
 
