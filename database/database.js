@@ -20,8 +20,8 @@ const sequelize = new Sequelize('school', 'root', '', {
   host: 'localhost',
   dialect: 'mysql'
 });
- if(sequelize.authenticate()){
+if (sequelize.authenticate()) {
   console.log('Connection has been established successfully.');
-} else{
+} else {
   console.error('Unable to connect to the database:', error);
 }

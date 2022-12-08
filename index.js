@@ -12,22 +12,22 @@ app.get('/id', function (req, res) {
     res.send('Hello World! 2')
 })
 
-function name(id,name) {
-        console.log(id)
+function name(id, name) {
+    console.log(id)
 }
 
 name(2)
 
-        //joe / 2  /test / 5
-app.get('/id/:name/test/:num',  (req, res) => {
+//joe / 2  /test / 5
+app.get('/id/:name/test/:num', (req, res) => {
     res.send('Hello World!' + req.params.id + req.params.name + req.params.num)
 })
 
-app.get('/test', (req,res)=>{
+app.get('/test', (req, res) => {
     res.send('test')
 })
 
-app.post('/register', (req,res)=>{
+app.post('/register', (req, res) => {
     console.log(req.body)
     res.send(`${req.body.name} ${req.body.lastName}`)
 })
@@ -41,7 +41,11 @@ app.get('/users', function (req, res) {
     db.query("SELECT * FROM students", function (err, result) {
         if (err) throw err;
         res.json(result);
-      });
+    });
 })
+
+
+
+
 
 app.listen(3000)
