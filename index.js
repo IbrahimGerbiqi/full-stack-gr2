@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
+
 const models = require('./models/index');
 
 const userRouters = require('./routers/users')
