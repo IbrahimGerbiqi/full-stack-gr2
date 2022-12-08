@@ -15,6 +15,13 @@ const deleteUser = (req,res)=>{
         res.json( userResponse )
     })
 }
+const loginUser = (req,res) =>{
+    models.User.findOne({
+        where:{email: req.body.email}
+    }).then(result =>{
+        
+    })
+}
 
 
 module.exports = {getUsersAndCount, deleteUser}
