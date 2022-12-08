@@ -12,3 +12,4 @@ app.use('/api/users', userRouters)
 app.use('/api/users', studentRouters)
 
 app.listen(3000)
+
