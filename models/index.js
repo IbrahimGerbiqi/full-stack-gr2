@@ -5,7 +5,7 @@ const basename = path.basename(module.filename)
 const env = process.env.NODE_ENV || 'development'
 const db = {}
 
-let sequelize = new Sequelize('school', 'root', 'Root', {
+let sequelize = new Sequelize('school', 'root', {
     host: 'localhost',
     dialect: 'mysql'
 })
