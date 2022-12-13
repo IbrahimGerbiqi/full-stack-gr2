@@ -3,7 +3,7 @@
 module.exports = (sequelize, DataTypes) => {
 
 const User = sequelize.define('User', {
-  // Model attributes are defined here
+
   id:{
     type: DataTypes.INTEGER,
     allowNull:false,
@@ -22,10 +22,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  // password: {
-  //   type: DataTypes.STRING,
-  //   allowNull: false
-  // },
+
 }, {
     tableName: 'users',
     timestamps:false,
@@ -36,7 +33,7 @@ const User = sequelize.define('User', {
 
 sequelize.sync()
 
-// `sequelize.define` also returns the model
- console.log(User === sequelize.models.User); // true
+
+ console.log(User === sequelize.models.User);
  return User;
 }
