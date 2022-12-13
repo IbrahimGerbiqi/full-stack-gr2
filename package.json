@@ -2,13 +2,13 @@
   "name": "full-stack-gr2",
   "version": "1.0.0",
   "description": "this is a testing case only",
-  "main": "index.js",
+  "main": "erdet.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "starto": "nodemon index.js"
+    "starto": "nodemon erdet.js"
   },
   "repository": {
     "type": "git",
