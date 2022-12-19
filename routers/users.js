@@ -6,6 +6,6 @@ router.get('/Users', FindUsers)
 router.put('/', UpdateUsers)
 router.delete("/", DeleteUser)
 router.get('/Page', FindUserWithPaggination)
-router.get("/JWT", LoginJwt)
+router.put("/JWT", LoginJwt)
 
 module.exports = router;
