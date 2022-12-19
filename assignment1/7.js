@@ -26,5 +26,12 @@ let student = {
         },
     ],
 };
+<<<<<<< HEAD
 
 console.log(`Student with name ${student.name} ${student.lastName} is ${student.age} years old from ${student.country.name}/${student.country.city.name}.`)
+=======
+// Student with name John Doe is 25 years old from Kosovo/Prizren
+
+let result = `Student with name ${student.name} ${student.lastName} is ${student.age} yearls old from ${student.country.name}/${student.country.city.name}`
+console.log(result)
+>>>>>>> 59c66b2518037919e7a6f9e113af30a8374ec844
