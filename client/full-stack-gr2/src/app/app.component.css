@@ -1,7 +1,21 @@
-.o{
-  background-color: aquamarine;
-  padding: 50px;
-}
-.flex{
 
+.header{
+  background-color: yellow;
+  padding: 2% 0%;
+  margin: 2% 0%;
 }
+
+.flex{
+  display: flex;
+}
+
+/* .main{
+    width: 80%;
+    background: red;
+} */
+
+.side-bar{
+  width: 20%;
+  background: blue;
+}
+
