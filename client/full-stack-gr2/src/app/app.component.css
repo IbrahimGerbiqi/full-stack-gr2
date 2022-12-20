@@ -1,0 +1,9 @@
+.header{
+    background-color: yellow;
+    padding: 2%;
+    margin: 2%;
+}
+
+.flex{
+    display: flex;
+}
