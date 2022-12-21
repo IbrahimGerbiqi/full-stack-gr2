@@ -1,0 +1,27 @@
+<p>contact works!</p>
+<!-- <h1>{{artist}}</h1> -->
+
+<!-- <p>{{studentet[1].emri}}</p> -->
+
+<div *ngFor="let studenti of studentet">
+    <p *ngIf="studenti.mosha == 19">
+        {{studenti.emri}} {{studenti.mbiemri}} eshte {{studenti.mosha}} vjecar
+    </p>
+</div>
+
+<table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr *ngFor="let studenti of studentet">
+      <td>{{studenti.emri}}</td>
+      <td>{{studenti.mbiemri}}</td>
+      <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
+      <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
+    </tr>
+  </table>
+
+
+<button (click)='submit()'>Submit</button>
