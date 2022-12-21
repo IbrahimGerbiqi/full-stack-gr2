@@ -6,16 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  artist = 'Isa Boletini'
+  artist = 'Nora Istrefi';
   studentet = [
     {
+      emri:'Erdet',
+      mbiemri:'Shehu',
+      mosha:22
+    },
+    {
+
       emri:'Ergon',
       mbiemri:'Syla',
       mosha:19
     },
     {
+
       emri:'Endrit',
       mbiemri:'Tytynxhiu',
+      mosha:17
+    },
+    {emri:'Bera',
+      mbiemri:'Turtulla',
       mosha:17
     }
   ]

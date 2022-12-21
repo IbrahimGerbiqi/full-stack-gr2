@@ -8,7 +8,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
+
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
