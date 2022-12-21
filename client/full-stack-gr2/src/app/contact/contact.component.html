@@ -1,0 +1,8 @@
+<p>contact works!</p>
+<p>test</p>
+
+<h1>{{studentet[1].emri}}</h1>
+
+<div *ngFor="let studenti of studentet">
+    <p *ngIf="studenti.mosha <= 19">{{studenti.emri}} {{studenti.mbiemri}}</p>
+</div>
