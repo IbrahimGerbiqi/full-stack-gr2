@@ -1,0 +1,13 @@
+<p>contact works!</p>
+
+
+Ergon Syla
+
+<h1>{{artist}}</h1>
+
+<p>{{studentet[0].emri}}</p>
+
+<div *ngFor="let studenti of studentet">
+    <p *ngIf="studenti.mosha == 19">{{studenti.emri}} {{studenti.mbiemri}}</p>
+</div>
+<button (click)="click">Clcik me</button>
