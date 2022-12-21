@@ -1,6 +1,6 @@
 <p>contact works!</p>
 
-<!-- <h1>{{artist}}</h1> -->
+<h1>{{artist}}</h1>
 
 <!-- <p>{{studentet[1].emri}}</p> -->
 
@@ -15,12 +15,41 @@
       <th>Emri</th>
       <th>Mbiemri</th>
       <th>Mosha</th>
+      <th>Delete</th>
+      <th>Update</th>
     </tr>
-    <tr *ngFor="let studenti of studentet">
+    <tr *ngFor="let studenti of studentet; let i = index">
       <td>{{studenti.emri}}</td>
       <td>{{studenti.mbiemri}}</td>
       <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
       <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
+      <td (click)='remove(i)'>
+        <span>-</span>
+        {{i}}
+      </td>
+      <td (click)='update(i)'>
+        <span>Update</span>
+      </td>
     </tr>
    
   </table>
+<br>
+<hr>
+<br>
+  <table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]='firstName'></td>
+      <td><input type="text" [(ngModel)]='lastName'></td>
+      <td><input type="text" [(ngModel)]='age'></td>
+    </tr>
+   
+  </table>
+
+  
+
+  <button (click)="submit()">Submit</button>
