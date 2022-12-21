@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'},
   {path:'login', component:LoginComponent},
+  {path:'not-found', component:NotFoundComponent},
   {path:'contact', component:ContactComponent},
-
-  {
-    path:'not-found', component:NotFoundComponent
-  },
   { path: '**', redirectTo: 'not-found' },
 ];
 
