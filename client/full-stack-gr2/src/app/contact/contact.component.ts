@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+
+  firstName:any
+  lastName:any
+  age:any
   
   artist = "Muniba Hamza";
 
@@ -24,6 +28,13 @@ export class ContactComponent {
 
   ];
   submit(){
-    
+  
+
+    this.studentet.push({
+      emri:this.firstName,
+      mbiemri:this.lastName,
+      mosha:this.age
+    })
+   
   }
 };

@@ -3,6 +3,7 @@
 <h1>{{artist}}</h1>
 
 <p>{{studentet[1].emri}}</p>
+
 <table>
     <tr>
         <th>Emri</th>
@@ -11,9 +12,9 @@
     </tr>
 <tr>
 
-<td><input type="text"[{Ngmodel}]='firstName'></td>
-<td><input type="text"[{Ngmodel}]='lastName'></td>
-<td><input type="text"[{Ngmodel}]='age'></td>
+<td><input type="text" [(ngModel)]='firstName'></td>
+<td><input type="text" [(ngModel)]='lastName'></td>
+<td><input type="text" [(ngModel)]='age'></td>
 </tr>
 </table>
-<button (click)="'submit">Submit</button>
+<button (click)="submit()">Submit</button>
