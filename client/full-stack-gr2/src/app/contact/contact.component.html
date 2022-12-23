@@ -18,11 +18,11 @@
       <th>Delete</th>
       <th>Update</th>
     </tr>
+
     <tr *ngFor="let studenti of studentet; let i = index">
-      <td>{{studenti.emri}}</td>
+      <td>{{studenti.emri | uppercase}}</td>
       <td>{{studenti.mbiemri}}</td>
-      <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
-      <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
+      <td [ngClass]="studenti.mosha <= 19 ? 'red' : ''">{{studenti.mosha | currency:'USD'}}</td>
       <td (click)='remove(i)'>
         <span>-</span>
         {{i}}
@@ -44,12 +44,30 @@
     </tr>
     <tr>
       <td><input type="text" [(ngModel)]='firstName'></td>
-      <td><input type="text" [(ngModel)]='lastName'></td>
-      <td><input type="text" [(ngModel)]='age'></td>
+      <td><input type="text" [(ngModel)]='lastName' [ngClass]="age <= 18 ? 'red' : ''"></td>
+      <td><input type="text" [(ngModel)]='age' ></td>
     </tr>
    
   </table>
 
-  
+  <button (click)='redirect()'>Login</button>
 
   <button (click)="submit()">Submit</button>
+
+  <button (click)='getWeather()'>Get Weather</button>
+
+
+  <table>
+    <tr>
+      <th>Koha</th>
+    </tr>
+    <tr *ngFor='let temp of this.koha?.hourly.temperature_2m; let i = index'>
+      <td>
+        <span [ngClass]="temp <= 0 ? 'red' :''">
+          {{temp}}
+        </span>
+      </td>
+    </tr>
+   
+  </table>
+

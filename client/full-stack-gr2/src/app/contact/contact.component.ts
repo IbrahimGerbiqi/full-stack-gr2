@@ -1,17 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { WeatherService } from 'service/weather.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent  implements OnInit{
+
+  constructor(
+    private router:Router,
+    private weather:WeatherService
+    ){}
+    
+  ngOnInit(): void {
+    this.weather.getWeather().pipe().subscribe((data)=>{
+      console.log(data)
+      this.koha = data
+    })
+  }
 
   firstName:string='';
   lastName:string='';
   age:number=0;
   isUpdate = false
   userId = 0
+  koha:any;
 
   artist = 'Nora Istrefi';
   studentet = [
@@ -32,6 +47,15 @@ export class ContactComponent {
     }
   ];
 
+  redirect(){
+    this.router.navigateByUrl('/login')
+    // this.router.navigate(['login'])
+  }
+
+  getWeather(){
+    
+  }
+
   remove(index:number){
       this.studentet.splice(index,1)
       this.isUpdate = false
@@ -46,6 +70,9 @@ export class ContactComponent {
   }
 
   submit(){
+  if(this.age <= 18){
+    this.redirect()
+  }
    if(!this.isUpdate){
     this.studentet.push({
       emri:this.firstName,
