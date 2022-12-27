@@ -7,6 +7,12 @@ import { Component, Type } from '@angular/core';
 })
 export class ContactComponent {
 
+  firstName:string='';
+  lastName:string='';
+  age:number=0;
+  isUpdate = false
+  userId = 0
+
   artist = 'Nora Istrefi';
   studentet = [
     {
@@ -29,31 +35,44 @@ export class ContactComponent {
   lastname: string='';
   age: number=0;
 
-  pozita: any;
-
-  pozita3: any;
-  lastname3: any;
-  age3: any;
-  firstname4: any;
-
-  test(){
-    let studenti = {
-      emri:this.firstname,
-      mbiemri:this.lastname,
-      mosha:this.age
-    }
-    this.studentet.push(studenti)
-  }
-  remove(){
-      let x=parseInt(this.pozita)
-      this.studentet.splice(x,1)
+  remove(index:number){
+      this.studentet.splice(index,1)
+      this.isUpdate = false
   }
 
-  update(){
-      let x=parseInt(this.pozita3)
-        this.studentet[x].emri = this.firstname4
-        this.studentet[x].mbiemri = this.lastname3
-        this.studentet[x].mosha = this.age3
-      
+  update(index:number){
+    this.firstName = this.studentet[index].emri
+    this.lastName = this.studentet[index].mbiemri
+    this.age = this.studentet[index].mosha
+    this.isUpdate = true
+    this.userId = index
   }
+
+  submit(){
+   if(!this.isUpdate){
+    this.studentet.push({
+      emri:this.firstName,
+      mbiemri:this.lastName,
+      mosha:this.age,
+    })
+   }else{
+    this.studentet[this.userId].emri = this.firstName
+    this.studentet[this.userId].mbiemri = this.lastName 
+    this.studentet[this.userId].mosha = this.age
+   }
+    this.resetFiels()
+  }
+
+  resetFiels(){
+    this.firstName = '';
+    this.lastName = ''
+    this.age = 0
+    this.isUpdate = false;
+    this.userId = -1
+  }
+
+
+
+
 }
+

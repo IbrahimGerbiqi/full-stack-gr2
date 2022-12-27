@@ -1,6 +1,6 @@
 <p>contact works!</p>
 
-<!-- <h1>{{artist}}</h1> -->
+<h1>{{artist}}</h1>
 
 <!-- <p>{{studentet[1].emri}}</p> -->
 
@@ -15,29 +15,40 @@
         <th>Emri</th>
         <th>Mbiemri</th>
         <th>Mosha</th>
+        <th>Delete</th>
+        <th>Update</th>
     </tr>
-    <tr *ngFor="let studenti of studentet">
+    <tr *ngFor="let studenti of studentet; let i = index">
         <td>{{studenti.emri}}</td>
         <td>{{studenti.mbiemri}}</td>
         <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
         <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
+        <td (click)='remove(i)'>
+            <span>-</span> {{i}}
+        </td>
+        <td (click)='update(i)'>
+            <span>Update</span>
+        </td>
     </tr>
 
 </table>
-<input [(ngModel)]="firstname" #ctrl="ngModel">
-<input [(ngModel)]="lastname" #ctrl="ngModel">
-<input [(ngModel)]="age" #ctrl="ngModel">
-<button (click)="test()">Insert me</button>
 <br>
 <hr>
 <br>
-<input [(ngModel)]="pozita" #ctrl="ngModel">
-<button (click)="remove()">Delete User</button>
-<br>
-<hr>
-<br>
-<input [(ngModel)]="pozita3" #ctrl="ngModel">
-<input [(ngModel)]="firstname4" #ctrl="ngModel">
-<input [(ngModel)]="lastname3" #ctrl="ngModel">
-<input [(ngModel)]="age3" #ctrl="ngModel">
-<button (click)="update()">Update me</button>
+<table>
+    <tr>
+        <th>Emri</th>
+        <th>Mbiemri</th>
+        <th>Mosha</th>
+    </tr>
+    <tr>
+        <td><input type="text" [(ngModel)]='firstName'></td>
+        <td><input type="text" [(ngModel)]='lastName'></td>
+        <td><input type="text" [(ngModel)]='age'></td>
+    </tr>
+
+</table>
+
+
+
+<button (click)="submit()">Submit</button>
