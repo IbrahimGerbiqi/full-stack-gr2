@@ -9,11 +9,11 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import { WeatherService } from 'service/weather.service';
+import { WeatherService } from 'services/weather.service';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from 'service/user.service';
+import { UserService } from 'services/user.service';
 import { WeatherComponent } from './weather/weather.component';
-import { MovieService } from 'service/movie/movie.service';
+import { MovieService } from 'services/movie/movie.service';
 import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
@@ -23,9 +23,7 @@ import { MovieComponent } from './movie/movie.component';
     NavBarComponent,
     SideBarComponent,
     NotFoundComponent,
-    ContactComponent,
-    WeatherComponent,
-    MovieComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
