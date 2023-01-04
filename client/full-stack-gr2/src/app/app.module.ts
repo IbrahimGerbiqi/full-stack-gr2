@@ -11,6 +11,10 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { WeatherService } from 'service/weather.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UserService } from 'service/user.service';
+import { WeatherComponent } from './weather/weather.component';
+import { MovieService } from 'service/movie/movie.service';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     SideBarComponent,
     NotFoundComponent,
-    ContactComponent
+    ContactComponent,
+    WeatherComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, UserService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
