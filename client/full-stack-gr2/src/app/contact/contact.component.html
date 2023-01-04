@@ -1,0 +1,73 @@
+<p>contact works!</p>
+
+<h1>{{artist}}</h1>
+
+<!-- <p>{{studentet[1].emri}}</p> -->
+
+<div *ngFor="let studenti of studentet">
+<p *ngIf="studenti.mosha>=19">
+    {{studenti.emri}} {{studenti.mbiemri}} eshte {{studenti.mosha}}  vjeçar
+</p>
+</div>
+
+<table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+      <th>Delete</th>
+      <th>Update</th>
+    </tr>
+
+    <tr *ngFor="let studenti of studentet; let i = index">
+      <td>{{studenti.emri | uppercase}}</td>
+      <td>{{studenti.mbiemri}}</td>
+      <td [ngClass]="studenti.mosha <= 19 ? 'red' : ''">{{studenti.mosha | currency:'USD'}}</td>
+      <td (click)='remove(i)'>
+        <span>-</span>
+        {{i}}
+      </td>
+      <td (click)='update(i)'>
+        <span>Update</span>
+      </td>
+    </tr>
+   
+  </table>
+<br>
+<hr>
+<br>
+  <table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]='firstName'></td>
+      <td><input type="text" [(ngModel)]='lastName' [ngClass]="age <= 18 ? 'red' : ''"></td>
+      <td><input type="text" [(ngModel)]='age' ></td>
+    </tr>
+   
+  </table>
+
+  <button (click)='redirect()'>Login</button>
+
+  <button (click)="submit()">Submit</button>
+
+  <button (click)='getWeather()'>Get Weather</button>
+
+
+  <table>
+    <tr>
+      <th>Koha</th>
+    </tr>
+    <tr *ngFor='let temp of this.koha?.hourly.temperature_2m; let i = index'>
+      <td>
+        <span [ngClass]="temp <= 0 ? 'red' :''">
+          {{temp}}
+        </span>
+      </td>
+    </tr>
+   
+  </table>
+
