@@ -9,6 +9,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { WeatherService } from 'service/weather.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,6 @@ import { FormsModule } from '@angular/forms';
     SideBarComponent,
     NotFoundComponent,
     ContactComponent
-
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
