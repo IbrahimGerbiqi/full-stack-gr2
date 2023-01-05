@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  firstName = '';
+  lastName= '';
+  age:any;
+
+
   artist = 'Nora Istrefi';
   studentet = [
     {
@@ -14,20 +20,22 @@ export class ContactComponent {
       mosha:22
     },
     {
-
       emri:'Ergon',
       mbiemri:'Syla',
       mosha:19
     },
     {
-
-      emri:'Endrit',
-      mbiemri:'Tytynxhiu',
-      mosha:17
-    },
-    {emri:'Bera',
+      emri:'Bera',
       mbiemri:'Turtulla',
       mosha:17
     }
-  ]
+  ];
+
+  test(){
+    this.studentet.push( {
+      emri:this.firstName,
+      mbiemri:this.lastName,
+      mosha:this.age
+      })
+  }
 }
