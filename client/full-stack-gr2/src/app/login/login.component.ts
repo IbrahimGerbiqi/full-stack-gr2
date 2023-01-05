@@ -18,6 +18,7 @@ export class LoginComponent {
   getUser(){
     this.user.getUser({email:this.email}).pipe().subscribe((data)=>{
       console.log(data)
+      this.router.navigate(["movie"])
     })
   }
 }

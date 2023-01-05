@@ -24,8 +24,8 @@ import { MovieComponent } from './movie/movie.component';
     SideBarComponent,
     NotFoundComponent,
     ContactComponent,
-    WeatherComponent,
-    MovieComponent
+    MovieComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
