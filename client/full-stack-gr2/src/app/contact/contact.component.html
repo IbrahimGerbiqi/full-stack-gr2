@@ -1,5 +1,10 @@
 <p>contact works!</p>
+<<<<<<< HEAD
 <!-- <h1>{{artist}}</h1> -->
+=======
+
+<h1>{{artist}}</h1>
+>>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
 
 <!-- <p>{{studentet[1].emri}}</p> -->
 
@@ -14,12 +19,26 @@
       <th>Emri</th>
       <th>Mbiemri</th>
       <th>Mosha</th>
+      <th>Delete</th>
+      <th>Update</th>
     </tr>
+<<<<<<< HEAD
     <tr *ngFor="let studenti of studentet let i = index">
       <td>{{studenti.emri}}</td>
+=======
+
+    <tr *ngFor="let studenti of studentet; let i = index">
+      <td>{{studenti.emri | uppercase}}</td>
+>>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
       <td>{{studenti.mbiemri}}</td>
-      <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
-      <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
+      <td [ngClass]="studenti.mosha <= 19 ? 'red' : ''">{{studenti.mosha | currency:'USD'}}</td>
+      <td (click)='remove(i)'>
+        <span>-</span>
+        {{i}}
+      </td>
+      <td (click)='update(i)'>
+        <span>Update</span>
+      </td>
     </tr>
 </table>
 
@@ -39,6 +58,7 @@
       <td><input type="text" [(ngModel)]='age' [ngClass]="age <=18 ? 'red' : ''"></td>
     </tr>
   </table>
+<<<<<<< HEAD
 
   <button (click)='submit()'>Submit</button> &nbsp;&nbsp;
   <button (click)='fshij()'>Fshij</button>&nbsp;&nbsp;
@@ -46,3 +66,43 @@
   
 
 
+=======
+<br>
+<hr>
+<br>
+  <table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]='firstName'></td>
+      <td><input type="text" [(ngModel)]='lastName' [ngClass]="age <= 18 ? 'red' : ''"></td>
+      <td><input type="text" [(ngModel)]='age' ></td>
+    </tr>
+   
+  </table>
+
+  <button (click)='redirect()'>Login</button>
+
+  <button (click)="submit()">Submit</button>
+
+  <button (click)='getWeather()'>Get Weather</button>
+
+
+  <table>
+    <tr>
+      <th>Koha</th>
+    </tr>
+    <tr *ngFor='let temp of this.koha?.hourly.temperature_2m; let i = index'>
+      <td>
+        <span [ngClass]="temp <= 0 ? 'red' :''">
+          {{temp}}
+        </span>
+      </td>
+    </tr>
+   
+  </table>
+
+>>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
