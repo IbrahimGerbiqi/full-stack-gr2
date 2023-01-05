@@ -1,0 +1,110 @@
+<p>contact works!</p>
+
+Arber Bytyqi
+
+<h1>{{artist}}</h1>
+
+<p>{{studentet[1].emri}}</p>
+
+<!-- for loopa e Angularit *ngFor -->
+<div *ngFor = "let studenti of studentet">
+<!-- if loopa e Angularit *ngIf -->    
+    <p *ngIf = "studenti.mosha==19">{{studenti.emri}} {{studenti.mbiemri}} eshte {{studenti.mosha}}</p>
+    <!-- <p *ngIf = "studenti.mosha>=19">{{studenti.emri}} {{studenti.mbiemri}} eshte {{studenti.mosha}}</p> -->
+</div>
+
+
+
+<table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+      <th>Delete</th>
+      <th>Update</th>
+    </tr>
+
+
+
+    <br>
+    <hr>
+    <br>
+    <tr>
+      <input type = "text" [(ngModel)]="firstName"> 
+      <input type = "text" [(ngModel)]="lastName"> 
+      <input type = "text" [(ngModel)]="age"> 
+    </tr>
+  
+  </table>
+
+
+
+
+
+
+<table>
+  <tr *ngFor="let studenti of studentet; let i = index">
+    <td>{{studenti.emri}}</td>
+    <td>{{studenti.mbiemri}}</td>
+    <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
+    <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
+    <td (click)='remove(i)'>
+      <span>-</span>
+      {{i}}
+    </td>
+    <td (click)='update(i)'>
+      <span>Update</span>
+    </td>
+  </tr>
+
+  
+</table>
+<br>
+<hr>
+<br>
+  <table>
+
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]='firstName'></td>
+      <td><input type="text" [(ngModel)]='lastName'></td>
+      <td><input type="text" [(ngModel)]='age' [ngClass]="age =< 18 ? "red" : ''"></td>
+    </tr>
+
+  </table>
+
+
+  <button (click)="submit()">Submit</button>
+
+ 
+<button (click)="redirect()">Login</button>
+
+<button (click)="getWeather()">Get weather</button>
+
+
+
+<table>
+
+  <tr>
+    <th>Koha</th>
+
+  </tr>
+  <!--for loop vetem supporton arraya, jo objekte -->
+  <!-- ketu del error sepse html po kerkon rezultat me shpejte sesa api qe mundet -->
+  <tr *ngFor="let i of this.koha.hourly.temperature_2m">
+  <!-- pikepyetja ? i thot njehere ktheje kohen e nese nuk vjen tjetra s'ke pse me hy ne for loop edhe ta shfaq
+  ketu x jo i sepse i e ke perdore me larte -->
+    <tr *ngFor="let temp of this.koha.hourly?.temperature_2m let x = index">
+      
+      <span [ngClass]="temp <= 0 ; "red" "><td>{{temp}}</td></span>
+  </tr>
+
+</table>
+
+
+
+

@@ -1,0 +1,7 @@
+<div *ngFor = "let movie of movies.result; let i=index">
+    <span>{{i+1}}{{movie.title}}</span>
+
+    <div>
+        <img src="https://image.tmdb.org/t/{{movie.poster_path}}">
+    </div>
+</div>
