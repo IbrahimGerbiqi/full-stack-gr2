@@ -15,13 +15,34 @@
       <th>Mbiemri</th>
       <th>Mosha</th>
     </tr>
-    <tr *ngFor="let studenti of studentet">
+    <tr *ngFor="let studenti of studentet let i = index">
       <td>{{studenti.emri}}</td>
       <td>{{studenti.mbiemri}}</td>
       <td *ngIf="studenti.mosha==19" style="color:red">{{studenti.mosha}}</td>
       <td *ngIf="studenti.mosha!=19">{{studenti.mosha}}</td>
     </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]='firstName'></td>
+      <td><input type="text" [(ngModel)]='lastName'></td>
+      <td><input type="text" [(ngModel)]='age' [ngClass]="age <=18 ? 'red' : ''"></td>
+    </tr>
   </table>
 
+  <button (click)='submit()'>Submit</button> &nbsp;&nbsp;
+  <button (click)='fshij()'>Fshij</button>&nbsp;&nbsp;
+  <button (click)='redirect()'>Login</button>
+  
 
-<button (click)='submit()'>Submit</button>
+
