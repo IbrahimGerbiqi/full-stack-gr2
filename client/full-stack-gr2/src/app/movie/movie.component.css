@@ -1,0 +1,26 @@
+.test{
+    font-size: 164px;
+}
+
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    .test{
+        color: red;
+        font-size: 100px;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .test{
+        color: green;
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .test{
+        color: yellow;
+        font-size: 25px;
+        font-weight: 800;
+    } 
+}

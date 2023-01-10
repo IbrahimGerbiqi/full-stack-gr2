@@ -9,15 +9,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
-<<<<<<< HEAD
-import { MovieService } from 'services/movie/movie.service';
-=======
-import { FormsModule } from '@angular/forms';
 import { WeatherService } from 'services/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from 'services/movie/movie.service';
 import { MovieComponent } from './movie/movie.component';
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
 
 @NgModule({
   declarations: [
@@ -32,12 +27,8 @@ import { MovieComponent } from './movie/movie.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    FormsModule
-=======
     FormsModule,
     HttpClientModule
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
   ],
   providers: [WeatherService, MovieService],
   bootstrap: [AppComponent]

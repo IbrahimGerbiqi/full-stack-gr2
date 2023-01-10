@@ -1,10 +1,6 @@
 <p>contact works!</p>
-<<<<<<< HEAD
-<!-- <h1>{{artist}}</h1> -->
-=======
 
 <h1>{{artist}}</h1>
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
 
 <!-- <p>{{studentet[1].emri}}</p> -->
 
@@ -22,14 +18,9 @@
       <th>Delete</th>
       <th>Update</th>
     </tr>
-<<<<<<< HEAD
-    <tr *ngFor="let studenti of studentet let i = index">
-      <td>{{studenti.emri}}</td>
-=======
 
     <tr *ngFor="let studenti of studentet; let i = index">
       <td>{{studenti.emri | uppercase}}</td>
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
       <td>{{studenti.mbiemri}}</td>
       <td [ngClass]="studenti.mosha <= 19 ? 'red' : ''">{{studenti.mosha | currency:'USD'}}</td>
       <td (click)='remove(i)'>
@@ -58,15 +49,6 @@
       <td><input type="text" [(ngModel)]='age' [ngClass]="age <=18 ? 'red' : ''"></td>
     </tr>
   </table>
-<<<<<<< HEAD
-
-  <button (click)='submit()'>Submit</button> &nbsp;&nbsp;
-  <button (click)='fshij()'>Fshij</button>&nbsp;&nbsp;
-  <button (click)='redirect()'>Login</button>
-  
-
-
-=======
 <br>
 <hr>
 <br>
@@ -105,4 +87,3 @@
    
   </table>
 
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b

@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-=======
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { WeatherService } from 'services/weather.service';
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
 
 @Component({
   selector: 'app-contact',
@@ -33,8 +28,6 @@ export class ContactComponent  implements OnInit{
   userId = 0
   koha:any;
 
-  constructor(private router: Router) {}
-
   artist = 'Nora Istrefi';
   studentet = [
     {
@@ -54,46 +47,6 @@ export class ContactComponent  implements OnInit{
     }
   ];
 
-<<<<<<< HEAD
-firstName: string=''
-lastName: string=''
-age: number=0;
-isUpdate = false
-userId = 0
-
-// CREATE
-submit(){
-if(this.age <=18){this.redirect()}
-if(!this.isUpdate){
-  this.studentet.push({
-    emri:this.firstName,
-    mbiemri:this.lastName,
-    mosha:this.age
-  })
-  }//else duhet te shtohet kodi per update
-  // console.log('test')
-}
-
-redirect(){
-  this.router.navigateByUrl('/login')
-}
-// READ
-
-// UPDATE
-// perditeso(){
-//   const itemIndex = 1
-//   const newItem = "Anetari 2 eshte perditesuar"
-
-//   //this.studentet[itemIndex] = newItem
-// }
-
-
-// DELETE
-fshij(){
-  this.studentet.splice(0,1)
-  // console.log('test')
-}
-=======
   redirect(){
     this.router.navigateByUrl('/login')
     // this.router.navigate(['login'])
@@ -144,7 +97,6 @@ fshij(){
 
 
 
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
 
 }
 
