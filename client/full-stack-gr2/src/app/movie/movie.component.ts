@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from 'interfaces/user';
 import { MovieService } from 'services/movie/movie.service';
 
 @Component({
@@ -12,8 +13,17 @@ export class MovieComponent implements OnInit {
 
   movies:any
 
+  user:IUser = {
+    firstName:'test',
+    lastName:'test 2',
+    age:2
+  }
+
 
   ngOnInit(): void {
+
+    this.movieService.createUser(this.user)
+
     this.movieService.movies(1).pipe().subscribe((data)=>{
       this.movies = data
       console.log(data)
