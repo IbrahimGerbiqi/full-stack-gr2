@@ -5,9 +5,9 @@
 <!-- <p>{{studentet[1].emri}}</p> -->
 
 <div *ngFor="let studenti of studentet">
-<p *ngIf="studenti.mosha>=19">
-    {{studenti.emri}} {{studenti.mbiemri}} eshte {{studenti.mosha}}  vjeçar
-</p>
+    <p *ngIf="studenti.mosha == 19">
+        {{studenti.emri}} {{studenti.mbiemri}} eshte {{studenti.mosha}} vjecar
+    </p>
 </div>
 
 <table>
@@ -31,7 +31,23 @@
         <span>Update</span>
       </td>
     </tr>
-   
+</table>
+
+<br>
+<hr>
+<br>
+
+<table>
+    <tr>
+      <th>Emri</th>
+      <th>Mbiemri</th>
+      <th>Mosha</th>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]='firstName'></td>
+      <td><input type="text" [(ngModel)]='lastName'></td>
+      <td><input type="text" [(ngModel)]='age' [ngClass]="age <=18 ? 'red' : ''"></td>
+    </tr>
   </table>
 <br>
 <hr>
