@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "devDependencies": {
-    "@angular/cli": "^15.0.4"
-=======
   "name": "full-stack-gr2",
   "version": "1.0.0",
   "description": "this is a testing case only",
@@ -25,6 +21,7 @@
   },
   "homepage": "https://github.com/IbrahimGerbiqi/full-stack-gr2#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "is-upper-case": "^2.0.2",
     "jsonwebtoken": "^8.5.1",
@@ -37,6 +34,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
->>>>>>> 7f5cba81711bf4ad293ccf097e1753bc48561c7b
   }
 }
